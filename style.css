@@ -12,10 +12,30 @@ img{
     flex: 1;
 }
 .vertical-collage img{
-    height: calc( () )
+    height: calc( ( 100% - 5px) )
 }
 .square-image{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+}
+
+
+/* Responsive Media Query */
+@media screen and (max-width:576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .square-image{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
 }
